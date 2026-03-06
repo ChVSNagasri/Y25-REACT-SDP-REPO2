@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import OIP from "../images/Logins.jpg";
+import Logins from "../images/Logins.jpg";
 import "./home.css";
 
 export default function Home() {
@@ -27,7 +27,7 @@ export default function Home() {
   return (
     <div>
       <div className="card">
-        <img className="oip" src={OIP} alt="Profile" width={100} height={100} />
+        <img className="oip" src={Logins} alt="Profile" width={100} height={100} />
         <div className="card-body">
           <h2 style={{ color: "#493755" }}>
            Welcome! {user.id}

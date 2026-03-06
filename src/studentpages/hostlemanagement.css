@@ -1,27 +1,26 @@
-
-
 body{
-    background-color: #f5f0ff;
+    background: linear-gradient(135deg,#f5f0ff,#e8e1ff);
     font-family: Arial, Helvetica, sans-serif;
 }
 
+/* Main container */
 .hostel-container{
     width: 70%;
     margin: 40px auto;
     background: #ffffff;
     padding: 30px;
-    border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(123,108,255,0.25);
 }
 
-
+/* Title */
 .title{
     text-align: center;
-    color: #6a5acd;
+    color: #5b7cfa;
     margin-bottom: 25px;
 }
 
-
+/* Table */
 .hostel-table{
     width: 100%;
     border-collapse: collapse;
@@ -30,26 +29,29 @@ body{
 
 .hostel-table td{
     padding: 12px;
-    border-bottom: 1px solid #e0d6ff;
+    border-bottom: 1px solid #e8e1ff;
 }
 
+/* Label cells */
 .label{
     font-weight: bold;
-    color: #5a4bb7;
+    color: #5b7cfa;
     width: 200px;
     background: #f3eeff;
+    border-radius: 6px;
 }
 
+/* Sections */
 .section{
     margin-top: 20px;
 }
 
 .section h2{
-    color: #6a5acd;
+    color: #5b7cfa;
     margin-bottom: 10px;
 }
 
-
+/* Amenities */
 .amenities{
     display: flex;
     flex-wrap: wrap;
@@ -57,56 +59,65 @@ body{
 }
 
 .amenity{
-    background: #e6ddff;
-    color: #4b3fa3;
+    background: #efeaff;
+    color: #5b7cfa;
     padding: 6px 14px;
     border-radius: 20px;
     font-size: 14px;
+    transition: 0.3s;
 }
 
+.amenity:hover{
+    background: #5b7cfa;
+    color: white;
+}
 
+/* Notices */
 .notices{
     padding-left: 20px;
 }
 
 .notices li{
     margin-bottom: 8px;
-    color: #444;
+    color: #555;
 }
 
-
+/* Buttons */
 .buttons{
     margin-top: 25px;
     display: flex;
     gap: 15px;
 }
 
-
+/* Primary button */
 .btn-primary{
-    background: #7b6cff;
+    background: #5b7cfa;
     color: white;
     border: none;
     padding: 10px 18px;
-    border-radius: 6px;
+    border-radius: 8px;
     cursor: pointer;
     font-size: 14px;
+    transition: 0.3s;
 }
 
 .btn-primary:hover{
-    background: #5f52d6;
+    background: #5b7cfa;
+    transform: translateY(-2px);
 }
 
-
+/* Secondary button */
 .btn-secondary{
-    background: #dcd3ff;
-    color: #4b3fa3;
+    background: #efeaff;
+    color: #5b7cfa;
     border: none;
     padding: 10px 18px;
-    border-radius: 6px;
+    border-radius: 8px;
     cursor: pointer;
     font-size: 14px;
+    transition: 0.3s;
 }
 
 .btn-secondary:hover{
-    background: #c7bbff;
+    background: #dcd3ff;
 }

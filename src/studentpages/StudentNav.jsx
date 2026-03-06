@@ -17,14 +17,14 @@ export default function StudentNav()
     <div className="main-container">
 
       <nav className="nav">
-        <button><Link to="/nav">Home</Link></button>
-        <button><Link to="/nav/profile">Profile</Link></button>
-        <button><Link to="/nav/hostle">Hostle</Link></button>
-        <button><Link to="/nav/attendance">Attendance</Link></button>
-        <button><Link to="/nav/course">Courses</Link></button>
-        <button><Link to="/nav/assignment">Assignment</Link></button>
-        <button><Link to="/nav/cgpa">CGPA</Link></button>
-        <button><Link to="/nav/timetable">Timetable</Link></button>
+        <button><Link to="/nav">🏠Home</Link></button>
+        <button><Link to="/nav/profile">👤Profile</Link></button>
+        <button><Link to="/nav/hostle">🏨Hostel</Link></button>
+        <button><Link to="/nav/attendance">✅Attendance</Link></button>
+        <button><Link to="/nav/course">📚Courses</Link></button>
+        <button><Link to="/nav/assignment">📝Assignment</Link></button>
+        <button><Link to="/nav/cgpa">🎓CGPA</Link></button>
+        <button><Link to="/nav/timetable">📅Timetable</Link></button>
         
         <button onClick={()=>navigate("/")}>Logout</button>
       </nav>

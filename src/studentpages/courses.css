@@ -9,7 +9,7 @@
 
 .page-title{
     text-align:center;
-    color:#5a4fcf;
+    color: #5b7cfa;
     margin-bottom:30px;
 }
 
@@ -26,7 +26,7 @@
 
 
 .courses-table th{
-    background:#6c63ff;
+    background: #5b7cfa;
     color:white;
     padding:14px;
     font-size:15px;
@@ -71,12 +71,12 @@
 
 
 .btn-view{
-    background:#7b6cff;
+    background: #5b7cfa;
     color:white;
 }
 
 
 .btn-view:hover{
-    background:#5146d8;
+    background: #5b7cfa;
     transform:scale(1.05);
 }
