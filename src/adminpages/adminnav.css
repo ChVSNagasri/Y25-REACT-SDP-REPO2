@@ -1,0 +1,46 @@
+/* Main container */
+.nav-container{
+    display: flex;
+}
+
+/* Sidebar */
+.naver{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 220px;
+    height: 100vh;
+    background-color: #2c3e50;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    gap: 15px;
+}
+
+/* Buttons */
+.naver button{
+    padding: 10px;
+    border: none;
+    background-color: #34495e;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Links */
+.naver a{
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+}
+
+/* Hover effect */
+.naver button:hover{
+    background-color: #1abc9c;
+}
+
+/* Content area */
+.nav-container > div{
+    margin-left: 240px;
+    padding: 20px;
+    width: 100%;
+}

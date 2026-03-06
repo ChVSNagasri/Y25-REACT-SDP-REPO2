@@ -1,0 +1,86 @@
+import "./login.css";
+import Logins from '../images/Logins.jpg'
+import { useRef } from "react";
+import { useNavigate } from "react-router-dom";
+ export default function Login() 
+{
+    const navigate=useNavigate()
+    const unameRef=useRef(null)
+    const pwdRef=useRef(null)
+    const roleRef=useRef(null) 
+
+    const handleRoleChange = () => {
+  unameRef.current.value = ""
+  pwdRef.current.value = ""
+}
+const handleSubmit=()=>{
+   
+     const uname=unameRef.current.value        
+     const pwd=pwdRef.current.value
+     const role=roleRef.current.value
+     if(role=="Student"){
+      if(uname=="student" && pwd=="student" )
+     {
+         alert("Login valid")
+         navigate("/nav")
+     }else{
+        alert("Invalid Please Enter Valid Credentials")
+     }   
+     }
+     else if(role=="Faculty"){
+        if(uname=="faculty" && pwd=="faculty" )
+     {
+         alert("Login valid")
+         navigate("/navers")
+     }else{
+        alert("Invalid")
+     }   
+    }
+     else if(role=="Parent"){
+        if(uname=="parent" && pwd=="parent" )
+     {
+         alert("Login valid")
+         navigate("/navs")
+     }else{
+        alert("Invalid")
+     }   
+     }
+      else{
+        if(uname=="admin" && pwd=="admin" )
+     {
+         alert("Login valid")
+         navigate("/naver")
+     }else{
+        alert("Invalid")
+     }   
+     }
+} 
+  return (
+    <div className="mainContainer">
+      <div className="image">
+        <img src={Logins} alt="login"/>
+      </div>
+      <div className="formSection">
+        <div className="loginCard">
+          <h2>Login</h2>
+        <form >
+            <select ref={roleRef} onClick={handleRoleChange}>
+                <option >Student</option>
+                <option >Faculty</option>
+                <option >Parent</option>
+                <option >Admin</option>
+            </select>
+            <br/>
+            <input type="text" placeholder='Enter UserName' ref={unameRef}/><br/>            
+            <input type="password" placeholder='Enter Password' ref={pwdRef}/><br/>   
+        </form>
+
+          <button className="loginBtn" type="button"  onClick={handleSubmit}>Login</button>
+
+        </div>
+      </div>
+
+    </div>
+  )
+}
+
