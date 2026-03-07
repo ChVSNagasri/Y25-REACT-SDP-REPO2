@@ -1,0 +1,66 @@
+.fee-container {
+  margin-left: 240px; /* space for sidebar */
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.fee-container h1 {
+  color: #5b7cfa; /* main theme color */
+  margin-bottom: 20px;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+}
+
+.fee-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.fee-table th, .fee-table td {
+  padding: 12px;
+  border: 1px solid #5b7cfa; /* table borders in theme color */
+  text-align: left;
+}
+
+.fee-table th {
+  background-color: #5b7cfa; /* header theme color */
+  color: white;
+}
+
+.fee-table tr:nth-child(even) {
+  background-color: #e6f0ff; /* light blue rows for readability */
+}
+
+.fee-table tr:nth-child(odd) {
+  background-color: #cce0ff; /* alternate light row */
+}
+
+/* Pay button */
+.fee-table button {
+  background-color: #5b7cfa;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.fee-table button:hover {
+  background-color: #4966d1; /* slightly darker for hover */
+}
+
+/* Paid / Pending colors */
+.fee-table td {
+  font-weight: 500;
+}
+
+.fee-table td[style*="green"] {
+  color: green;
+}
+
+.fee-table td[style*="red"] {
+  color: red;
+}

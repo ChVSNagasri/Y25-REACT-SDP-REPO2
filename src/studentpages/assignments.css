@@ -1,14 +1,13 @@
-/* Wrapper for all cards */
+
 .assignment-wrapper {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 25px;
   padding: 40px 20px;
-  background-color: #e6edff; /* soft page background */
-}
+  background-color: #e6edff; 
 
-/* Card styling */
+
 .assignment-card {
   width: 270px;
   background: white;
@@ -25,15 +24,14 @@
   box-shadow: 0 15px 35px rgba(0,0,0,0.25);
 }
 
-/* Image with overlay */
 .card-image-wrapper {
   position: relative;
 }
 
 .card-image {
   width: 100%;
-  height: 170px; /* keep same height for all cards */
-  object-fit: cover; /* crops images nicely without stretching */
+  height: 170px; 
+  object-fit: cover; 
   border-radius: 12px 12px 0 0;
   display: block;
 }
@@ -52,7 +50,7 @@
   background: linear-gradient(to bottom right, rgba(91,124,250,0.8), rgba(91,124,250,0.3));
 }
 
-/* Badge */
+
 .badge {
   position: absolute;
   top: 12px;
@@ -71,7 +69,7 @@
   transform: scale(1.1);
 }
 
-/* Card content */
+
 .card-content {
   padding: 15px 20px 25px 20px;
   text-align: center;
@@ -83,7 +81,7 @@
   margin-bottom: 15px;
 }
 
-/* Progress bar */
+
 .progress-bar {
   height: 8px;
   width: 100%;
@@ -97,4 +95,4 @@
   background: linear-gradient(90deg, #5b7cfa, #8ab6ff);
   border-radius: 10px;
   transition: width 0.6s ease;
-}
+}}

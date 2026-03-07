@@ -14,11 +14,11 @@ export default function ParentNav()
     <div className="container">
       
       <nav className="navs">
-        <button><Link to="/navs">Home</Link></button>
-        <button><Link to="/navs/fee">Fee</Link></button>
-        <button><Link to="/navs/attendance">Attendance</Link></button>
-        <button><Link to="/navs/grade">Children Grade</Link></button>
-        <button><Link to="/navs/hostle">Hostle</Link></button>
+        <button><Link to="/navs">🏠Home</Link></button>
+        <button><Link to="/navs/fee">💰Fee</Link></button>
+        <button><Link to="/navs/attendance">📊Attendance</Link></button>
+        <button><Link to="/navs/grade">🎓Children Grade</Link></button>
+        <button><Link to="/navs/hostle">🏢Hostle</Link></button>
         <button onClick={()=>navigate("/")}>Logout</button>
       </nav>
 
