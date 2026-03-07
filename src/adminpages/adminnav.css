@@ -1,16 +1,16 @@
 /* Main container */
-.nav-container{
+.nav-container {
     display: flex;
 }
 
 /* Sidebar */
-.naver{
+.naver {
     position: fixed;
     left: 0;
     top: 0;
     width: 220px;
     height: 100vh;
-    background-color: #2c3e50;
+    background-color: #5b7cfa; /* Updated color */
     display: flex;
     flex-direction: column;
     padding: 20px;
@@ -18,28 +18,28 @@
 }
 
 /* Buttons */
-.naver button{
+.naver button {
     padding: 10px;
     border: none;
-    background-color: #34495e;
+    background-color: #5b7cfa; /* Match sidebar color */
     border-radius: 5px;
     cursor: pointer;
 }
 
 /* Links */
-.naver a{
+.naver a {
     text-decoration: none;
-    color: white;
+    color: darkslateblue;
     font-size: 16px;
 }
 
 /* Hover effect */
-.naver button:hover{
-    background-color: #1abc9c;
+.naver button:hover {
+    background-color: #3f5fc1; /* Slightly darker shade for hover */
 }
 
 /* Content area */
-.nav-container > div{
+.nav-container > div {
     margin-left: 240px;
     padding: 20px;
     width: 100%;

@@ -14,10 +14,10 @@ export default function AdminNav()
     <div className="nav-container">
 
         <nav className="naver">
-              <button><Link to="/naver">Home</Link></button>
-              <button><Link to="/naver/addstudents">Add Student's</Link></button>
-              <button><Link to="/naver/addfaculty">Add Faculty's</Link></button>
-              <button><Link to="/naver/manageevents">Events</Link></button>
+              <button><Link to="/naver">🏠Home</Link></button>
+              <button><Link to="/naver/addstudents">🎓Add Student's</Link></button>
+              <button><Link to="/naver/addfaculty">👩‍🏫Add Faculty's</Link></button>
+              <button><Link to="/naver/manageevents">📅Events</Link></button>
               <button onClick={() => navigate("/")}>Logout</button>
         </nav>
 
