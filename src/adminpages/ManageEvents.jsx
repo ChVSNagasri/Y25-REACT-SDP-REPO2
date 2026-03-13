@@ -1,36 +1,36 @@
 import React, { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
 import "./manageevents.css";
+import Awarders from "./Awarders";
 
 export default function ManageEvents() {
-
-  const navigate = useNavigate()
 
   const initialEvents = [
     { id: 1, name: "Samyuk", date: "2026-03-20", location: "Cricket Ground" },
     { id: 2, name: "Surabhi", date: "2026-04-10", location: "Seminar Hall" },
-    { id: 3, name: "FemFlare", date: "2026-05-05", location: "peacock Hall" },
+    { id: 3, name: "FemFlare", date: "2026-05-05", location: "Peacock Hall" },
     { id: 4, name: "Hackathons", date: "2026-06-15", location: "Computer Lab" }
-  ]
+  ];
 
   const [events, setEvents] = useState(() => {
     const stored = localStorage.getItem("events");
     return stored ? JSON.parse(stored) : initialEvents;
-  })
+  });
 
-  const [name, setName] = useState("")
-  const [date, setDate] = useState("")
-  const [location, setLocation] = useState("")
+  const [name, setName] = useState("");
+  const [date, setDate] = useState("");
+  const [location, setLocation] = useState("");
+
+  const [showCTC, setShowCTC] = useState(false);
 
   useEffect(() => {
-    localStorage.setItem("events", JSON.stringify(events))
-  }, [events])
+    localStorage.setItem("events", JSON.stringify(events));
+  }, [events]);
 
   const addEvent = () => {
 
     if (!name || !date || !location) {
-      alert("Fill all fields")
-      return
+      alert("Fill all fields");
+      return;
     }
 
     const newEvent = {
@@ -38,36 +38,41 @@ export default function ManageEvents() {
       name,
       date,
       location
-    }
+    };
 
-    setEvents([...events, newEvent])
+    setEvents([...events, newEvent]);
 
-    setName("")
-    setDate("")
-    setLocation("")
-  }
+    setName("");
+    setDate("");
+    setLocation("");
+  };
 
   return (
-   <div className="container">
+    <div className="container">
 
-  <div className="add-event-wrapper">
-    
-    <div className="event-card add-card">
+      <div className="add-event-wrapper">
 
-      <h3>Add Event</h3>
+        <div className="event-card add-card">
 
-     <input placeholder="Event Name" value={name} onChange={(e) => setName(e.target.value)}/>
-      <br/>
-<input type="date" value={date} onChange={(e) => setDate(e.target.value)}/>
-      <br/>
-<input placeholder="Location" value={location} onChange={(e) => setLocation(e.target.value)}/>
-      <br/>
+          <h3>Add Event</h3>
 
-      <button onClick={addEvent}>Add Event</button>
+  <input className="w-full border border-gray-400 rounded-md p-2 mt-1 focus:outline-none focus:border-blue-500"
+      placeholder="Event Name" value={name} onChange={(e) => setName(e.target.value)}/>
+          <br />
 
-    </div>
+  <input className="w-full border border-gray-400 rounded-md p-2 mt-1 focus:outline-none focus:border-blue-500"
+      type="date" value={date} onChange={(e) => setDate(e.target.value)}/>
+          <br />
 
-  </div>
+  <input className="w-full border border-gray-400 rounded-md p-2 mt-1 focus:outline-none focus:border-blue-500"
+  placeholder="Location" value={location} onChange={(e) => setLocation(e.target.value)} />
+          <br />
+
+          <button onClick={addEvent}>Add Event</button>
+
+        </div>
+
+      </div>
 
       <h2>College Events</h2>
 
@@ -83,11 +88,15 @@ export default function ManageEvents() {
 
         <div className="event-card">
           <h3>CTC Awarded Students</h3>
-          <button type="button" onClick={() => navigate("/award")}>
+          <button onClick={() => setShowCTC(!showCTC)}>
             View CTC Students
           </button>
         </div>
+
       </div>
+
+      {showCTC && <Awarders />}
+
     </div>
-  )
+  );
 }

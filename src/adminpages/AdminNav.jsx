@@ -9,7 +9,9 @@ import Notfound from '../Notfound'
 export default function AdminNav() 
 {
     const navigate = useNavigate()
-
+            const handleAPI = () => {
+    navigate('/naver/manageevents');
+  };
   return (
     <div className="nav-container">
 
@@ -17,7 +19,7 @@ export default function AdminNav()
               <button><Link to="/naver">🏠Home</Link></button>
               <button><Link to="/naver/addstudents">🎓Add Student's</Link></button>
               <button><Link to="/naver/addfaculty">👩‍🏫Add Faculty's</Link></button>
-              <button><Link to="/naver/manageevents">📅Events</Link></button>
+              <button onClick={handleAPI}>📅Events</button>
               <button onClick={() => navigate("/")}>🔒Logout</button>
         </nav>
 
